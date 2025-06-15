@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'qa-guru'
+group = 'chursov'
 version = '1.0-SNAPSHOT'
 
 repositories {

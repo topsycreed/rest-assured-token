@@ -1,4 +1,4 @@
-package qa-guru;
+package chursov;
 
 public class Main {
     public static void main(String[] args) {
