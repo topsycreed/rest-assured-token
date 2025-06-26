@@ -3,7 +3,6 @@ package controllers;
 import config.TestPropertiesConfig;
 import dto.AddItemRequest;
 import dto.BagResponse;
-import enums.UserRole;
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.Response;
@@ -13,7 +12,6 @@ import support.TokenManager;
 
 import java.util.List;
 
-import static enums.UserRole.GUEST;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 
@@ -30,7 +28,7 @@ public class BagController {
                 .contentType(JSON)
                 .baseUri(configProperties.getApiBaseUrl())
                 .header("aesite", "AEO_US")
-                .header("x-access-token", TokenManager.getToken(GUEST))
+                .header("x-access-token", TokenManager.getToken())
                 .filter(new AllureRestAssured());
     }
 
