@@ -6,6 +6,7 @@ import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.aeonbits.owner.ConfigFactory;
+import org.apache.commons.lang3.NotImplementedException;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
@@ -39,5 +40,9 @@ public class TokenClient {
                 .extract()
                 .response();
         return response.jsonPath().getString("access_token");
+    }
+
+    public static String getAuthToken() {
+        throw new NotImplementedException("Not yet implemented!");
     }
 }
